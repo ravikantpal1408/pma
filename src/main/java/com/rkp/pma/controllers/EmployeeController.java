@@ -23,7 +23,7 @@ public class EmployeeController {
 		
 		model.addAttribute("employee", new Employee());
 		
-		return "newEmployee";
+		return "employees/newEmployee";
 	}
 	
 	
