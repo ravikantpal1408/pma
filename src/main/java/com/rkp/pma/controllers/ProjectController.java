@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+// import org.springframework.web.bind.annotation.RequestParam;
 
 import com.rkp.pma.dao.IEmployeeRepository;
 import com.rkp.pma.dao.IProjectRepository;
@@ -40,9 +41,16 @@ public class ProjectController {
 	
 	@PostMapping("/save")
 	public String createProject(Project project, Model model) {
-		// this should handle saving data to database 
 		
+		// this should handle saving data to database 
 		proRepo.save(project);
+
+		// Iterable<Employee> choosenEmps = empRepo.findAllById(employees);
+		
+		// for(Employee emp: choosenEmps) {
+		// 	emp.setProjects(project);
+		// 	empRepo.save(emp);
+		// }
 		
 		return "redirect:/projects/new";
 	}
