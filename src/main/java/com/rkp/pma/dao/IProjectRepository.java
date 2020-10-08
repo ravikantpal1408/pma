@@ -4,12 +4,13 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
 import com.rkp.pma.dto.IChartDto;
 import com.rkp.pma.entities.Project;
 
 
-//@Repository
+@Repository
 public interface IProjectRepository extends CrudRepository<Project, Long>{
 	
 	@Override
